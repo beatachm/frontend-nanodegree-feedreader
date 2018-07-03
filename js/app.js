@@ -41,6 +41,13 @@ function init() {
  * which will be called after everything has run successfully.
  */
  function loadFeed(id, cb) {
+     if(typeof(id) === 'undefined'){
+         throw new Error('Id parameter must be defined.');
+     }
+     if(id < 0 || id >= allFeeds.length){
+        throw new Error("Id parameter value is out of range.");
+     }
+
      var feedUrl = allFeeds[id].url,
          feedName = allFeeds[id].name;
 
