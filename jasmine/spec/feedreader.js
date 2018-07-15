@@ -16,7 +16,7 @@ $(function() {
             allFeeds.map(function(f) {
                 expect(f.url).toBeDefined();
 
-                expect(f.name.url.length).not.toBe(0);
+                expect(f.url.length).not.toBe(0);
             });
         });
 
